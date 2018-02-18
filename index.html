@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>I Encontro da Família Oliveira</title>
+    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Sacramento', Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .title {
+            font-size: 4rem;            
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .family-crest {
+            max-height: 20rem;
+            width: auto;
+        }
+
+        .countdown {
+            font-size: 3rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <p>1º Encontro da Família Oliveira</p>
+        <img class="family-crest" src="assets/brasao-800.png" alt="Brasão Família Oliveira">
+    </div>
+    <div class="countdown">
+        <p>Faltam</p>
+        <div id="countdown"></div>
+    </div>
+    <script>
+        const deadline = new Date(Date.UTC(2018, 5, 12, 8)).getTime();
+
+        const count = setInterval(function() {
+            const now = new Date().getTime();
+
+            const diff = deadline - now;
+
+            let diffDate = new Date();
+            diffDate.setTime(diff);
+
+            const days = diffDate.getDate();
+            const hours = diffDate.getHours();
+            const minutes = diffDate.getMinutes();
+            const seconds = diffDate.getSeconds();
+
+            
+            document.querySelector('#countdown').innerHTML = `${days} dias ${hours}h ${minutes}m  ${seconds}s`;
+        }, 1000)
+        
+    </script>
+</body>
+</html>
