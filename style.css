@@ -1,0 +1,121 @@
+body {
+  background-color: #53777a;
+  font-family: "Sacramento", Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+body h1 {
+  font-weight: normal;
+}
+
+.container {
+  margin: 1rem;
+}
+
+.title {
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.family-crest {
+  max-height: 20rem;
+  width: auto;
+}
+
+.countdown {
+  color: #fff;
+  font-size: 3rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.countdown > div {
+  background-color: #d95b43;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px;
+  width: 10rem;
+}
+
+.countdown div > span {
+  background-color: #ecd078;
+  border-radius: 3px;
+  display: inline-block;
+  font-weight: bold;
+  padding: 15px;
+  margin: 10px 0;
+  width: 7rem;
+}
+
+@media screen and (max-width: 420px) {
+  .container {
+    margin: 0.5rem;
+  }
+
+  .title {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .countdown {
+    font-weight: normal;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .countdown > div {
+    font-size: 1rem;
+    padding: 4px;
+    width: 3.75rem;
+  }
+
+  .countdown div > span {
+    font-size: 1rem;
+    padding: 5px;
+    margin: 0;
+    width: 3rem;
+  }
+
+  .smalltext {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) and (min-width: 420px) {
+  .countdown > div {
+    font-size: 1.2rem;
+    padding: 4px;
+    width: 5rem;
+  }
+
+  .countdown div > span {
+    font-size: 1rem;
+    padding: 10px 0;
+    width: 4rem;
+  }
+
+  .smalltext {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 600px) {
+  .countdown > div {
+    font-size: 1.2rem;
+    padding: 7px;
+    width: 6rem;
+  }
+
+  .countdown div > span {
+    font-size: 1rem;
+    padding: 15px 12px;
+    width: 4rem;
+  }
+
+  .smalltext {
+    font-size: 1.5rem;
+  }
+}
