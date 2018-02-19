@@ -50,6 +50,11 @@ body h1 {
   width: 7rem;
 }
 
+.list-comments {
+  background-color: #fff;
+  padding: 10px;
+}
+
 @media screen and (max-width: 420px) {
   .container {
     margin: 0.5rem;
