@@ -6,6 +6,7 @@ const count = setInterval(function() {
 
   // https://www.w3schools.com/howto/howto_js_countdown.asp
   const days = Math.floor(diff / 1000 / 60 / 60 / 24);
+
   let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + 3; // Soma 3 para compensar o fuso
   hours = hours < 10 ? `0${hours}` : hours;
 
@@ -15,8 +16,8 @@ const count = setInterval(function() {
   let seconds = Math.floor((diff % (1000 * 60)) / 1000);
   seconds = seconds < 10 ? `0${seconds}` : seconds;
 
-  document.querySelector("#days").innerHTML = days;
-  document.querySelector("#hours").innerHTML = hours;
-  document.querySelector("#minutes").innerHTML = minutes;
-  document.querySelector("#seconds").innerHTML = seconds;
+  document.querySelector("#days").innerHTML = days < 0 ? 0 : days;
+  document.querySelector("#hours").innerHTML = hours < 0 ? 0 : hours;
+  document.querySelector("#minutes").innerHTML = minutes < 0 ? 0 : minutes;
+  document.querySelector("#seconds").innerHTML = seconds < 0 ? 0 : seconds;
 }, 1000);
